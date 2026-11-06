@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>NetMirror</title>
+  <style>
+    html, body {
+      width: 100%; height: 100%; margin: 0;
+      background: #080808; color: #fff;
+      font-family: Arial, sans-serif;
+      display: grid; place-items: center;
+    }
+    main { text-align: center; padding: 32px; }
+    h1 { font-size: 42px; margin: 0 0 14px; }
+    p { color: #bbb; font-size: 22px; }
+    button {
+      margin-top: 18px; padding: 16px 30px; font-size: 22px;
+      color: #fff; background: #e50914; border: 0; border-radius: 8px;
+    }
+    button:focus { outline: 4px solid white; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>NetMirror</h1>
+    <p>Opening NetMirror…</p>
+    <button id="open">Open NetMirror</button>
+  </main>
+  <script>
+    (function () {
+      "use strict";
+      var target = "https://net77.cc/home";
+      function openNetMirror() {
+        window.location.replace(target);
+      }
+      document.getElementById("open").addEventListener("click", openNetMirror);
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.keyCode === 13) {
+          openNetMirror();
+        }
+      });
+      // Brief landing screen gives the TV browser time to initialize.
+      window.setTimeout(openNetMirror, 1200);
+    }());
+  </script>
+</body>
+</html>

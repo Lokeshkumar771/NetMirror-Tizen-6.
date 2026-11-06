@@ -1,0 +1,11 @@
+{
+  "name": "netmirror-tizen",
+  "version": "1.0.0",
+  "description": "A simple TizenBrew app launcher for the NetMirror web interface.",
+  "packageType": "app",
+  "appName": "NetMirror",
+  "appPath": "app/index.html",
+  "keys": [
+    "Back"
+  ]
+}
